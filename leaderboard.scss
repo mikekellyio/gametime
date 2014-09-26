@@ -1,0 +1,87 @@
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 200;
+    padding: 0;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+$green: green;
+$red: red;
+$blue: blue;
+$yellow: yellow;
+
+html,body{
+  height:100%;
+  padding:0;
+  margin:0;
+}
+.outer {
+  min-height:100%; 
+  position:relative;
+  
+  .leaderboard {
+    position:absolute;
+    right: 20px;
+    bottom: 20px;
+    font-size:150%;
+  }
+  .players {
+    position: absolute;
+    top:0;
+    height: 100%;
+    width: 100%;
+    
+    .player {
+      position:relative;
+      float:left;
+      height: 50%;
+      width: 50%;
+      
+      .inc {
+        height: 50%;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        color:transparent;
+      }
+      .dec {
+        height: 50%;
+        left: 0;
+        top:50%;
+        position: absolute;
+        width: 100%;
+        color:transparent;
+      }
+      
+      .score {
+        margin: auto;
+        position: absolute;
+        height:50px;
+        top: 0; left: 0; bottom: 0; right: 0;
+        text-align: center;
+        font-size:500%;
+      }
+      
+      &.green {
+        background: $green;
+        color: complement( $green );
+      }
+      &.blue {
+        background: $blue;
+        color: complement($blue);
+      }
+      &.yellow {
+        background: $yellow;
+        color: complement($yellow);
+      }
+      &.red {
+        background: $red;
+        color: complement($red);
+      }
+    }
+  }
+}
