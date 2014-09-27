@@ -19,6 +19,17 @@ html,body{
   padding:0;
   margin:0;
 }
+
+.logo {
+  position:absolute;
+  bottom: 0;
+  left: 0;
+  
+  img {
+    width:15%;
+  }
+}
+
 .outer {
   min-height:100%; 
   position:relative;
